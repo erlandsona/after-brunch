@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A micro-plugin to run commands line scripts after-compile.",
   "main": "./lib/index",
-  "author": "Stephen Hutchings",
+  "author": "s-ings",
   "license": "BSD",
   "dependencies": {},
   "scripts": {},
