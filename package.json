@@ -1,6 +1,6 @@
 {
   "name": "after-brunch",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A micro-plugin to run commands line scripts after Brunch's compile.",
   "main": "./lib/index",
   "author": "s-ings",
