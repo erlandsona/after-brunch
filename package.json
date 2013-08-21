@@ -1,6 +1,6 @@
 {
   "name": "after-brunch",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A micro-plugin to run commands line scripts after Brunch's compile.",
   "main": "./lib/index",
   "author": "s-ings",
@@ -10,7 +10,7 @@
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
-    "url": "https://github.com/stephenhutchings/after-brunch"
+    "url": "https://github.com/Creative-Licence-Digital/after-brunch"
   },
   "keywords": [
     "brunch",
