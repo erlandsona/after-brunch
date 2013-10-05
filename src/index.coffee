@@ -1,19 +1,19 @@
 sysPath = require 'path'
-{exec} = require 'child_process'
+{exec}  = require 'child_process'
 
 module.exports = class AfterBrunch
   brunchPlugin: yes
 
   constructor: (@config) ->
-    for command in @config.plugins.afterBrunch
-      process = command.split(" ")[0]
-      exec "#{process} --version", (error, stdout, stderr) =>
-        if error isnt null
-          console.log "exec error: #{error}"
-          console.log "Check to see whether #{process} is installed."
-
+    @commands = @config.plugins.afterBrunch ? []
 
   onCompile: (generatedFiles) ->
-    for command in @config.plugins.afterBrunch
+    for command in @commands
       exec command, (error, stdout, stderr) ->
-        console.log "exec error: " + error if error isnt null
+        if error
+          console.log error.message
+        else
+          console.log stdout if stdout
+          console.log stderr if stderr
+
+    return

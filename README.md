@@ -8,12 +8,11 @@ Or `npm install after-brunch --save`.
 Then in your `config.coffee` just add any commands to the afterBrunch array.
 For example, you might want to use styledocco to create a live styleguide of your stylesheets.
 
-
-    exports.config =
-      plugins:
-        afterBrunch: [
-          "styledocco -n "My Project" css"
-        ]
-
-
-***I've added a plugins object to the `config`. If there's a better way to do this, let me know.***
+```coffeescript
+exports.config =
+  …
+  plugins:
+    afterBrunch: [
+      'styledocco -n "My Project" css'
+    ]
+```
