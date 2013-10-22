@@ -6,7 +6,9 @@
   "author": "s-ings",
   "license": "BSD",
   "dependencies": {},
-  "scripts": {},
+  "scripts": {
+    "prepublish": "rm -rf lib && coffee --bare --output lib/ src/"
+  },
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
