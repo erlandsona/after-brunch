@@ -10,10 +10,8 @@ module.exports = class AfterBrunch
   onCompile: (generatedFiles) ->
     for command in @commands
       exec command, (error, stdout, stderr) ->
-        if error
-          console.log error.message
-        else
-          console.log stdout if stdout
-          console.log stderr if stderr
+        console.log stdout if stdout
+        console.log error.message if error
+        console.log stderr if stderr
 
     return
